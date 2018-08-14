@@ -27,7 +27,6 @@ set noexpandtab
 
 " Other settings
 set encoding=utf-8
-map <C-o> :NERDTreeToggle<CR>
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 autocmd StdinReadPre * let s:std_in=1
