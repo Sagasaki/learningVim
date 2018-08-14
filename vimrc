@@ -1,5 +1,6 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype plugin on                  " required
+syntax enable
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin() 
 
@@ -30,7 +31,6 @@ set encoding=utf-8
 set number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let &t_ti.="\e[1 q"
 let &t_SI.="\e{5 q"
 let &t_EI.="\e[1 q"
@@ -42,3 +42,6 @@ let g:lightline = {'colorscheme': 'wombat'}
 if !has('gui_running')
 	set t_Co=256
 endif
+
+set path+=**
+set wildmenu
